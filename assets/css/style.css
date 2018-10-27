@@ -1,0 +1,196 @@
+/* Application Setup & Variables */
+
+:root {
+  --exit-btn-color: #ff594f;
+  --min-btn-color: #ffbc1b;
+  --max-btn-color: #00cd46;
+  --btn-group-bg-color: rgba(16, 16, 34);
+  --navi-bg-transparent: rgba(16, 16, 34, 0.9);
+  --main-font: "Roboto", sans-serif;
+  --active-nav-color: #292a48;
+  --inner-bg-color: #f6f6f6;
+  --light-gray: #ffffff;
+  --mac-os-radious: 7px;
+  --navi-width: 150px;
+  --bg-img-url: url("../img/background.jpg");
+  --inner-border-color: #e0e0e0;
+  --issues-text-color: #4a4848;
+  --sidebar-num-color: #8a8995;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  font-family: var(--main-font);
+}
+
+/* Background Setup */
+
+.app-background {
+  background: var(--bg-img-url) no-repeat;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Main Container */
+
+.app-container {
+  width: 650px;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: var(--mac-os-radious);
+}
+
+.sidebar .btn-group {
+  height: 38px;
+  padding-left: 12px;
+  background-color: var(--btn-group-bg-color);
+}
+
+.btn-group .btn-exit {
+  background-color: var(--exit-btn-color);
+}
+
+.btn-group .btn-minimise {
+  background-color: var(--min-btn-color);
+}
+
+.btn-group .btn-maximise {
+  background-color: var(--max-btn-color);
+}
+
+.btn-group .system-btn {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  margin: 14px 2px 14px 2px;
+}
+
+.sidebar,
+.content {
+  float: left;
+}
+
+.sidebar {
+  background-color: var(--navi-bg-transparent);
+  width: var(--navi-width);
+  height: 100%;
+}
+
+.sidebar nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+.sidebar-item:hover,
+.sidebar-item a:focus {
+  cursor: pointer;
+  background-color: var(--active-nav-color);
+}
+
+.sidebar-item a {
+  color: var(--light-gray);
+  line-height: 50px;
+  font-size: 14px;
+  text-decoration: none;
+  padding-left: 15px;
+}
+
+.sidebar-item img {
+  padding-right: 10px;
+  width: 16px;
+  vertical-align: middle;
+}
+
+.sidebar-item span {
+  color: var(--sidebar-num-color);
+  right: 0;
+  margin-right: 15px;
+  font-weight: 14px;
+  position: absolute;
+}
+
+.sidebar .active {
+  background-color: var(--active-nav-color);
+}
+
+/* Issues */
+
+.content {
+  width: calc(100% - var(--navi-width));
+  background-color: var(--inner-bg-color);
+  height: 100%;
+}
+
+.content .inner {
+  padding: 0 20px 0 15px;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.content ol,
+.content ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.issue-item {
+  padding: 0 10px 0 12px;
+  border-radius: 5px;
+  background-color: var(--light-gray);
+  line-height: 10px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: var(--issues-text-color);
+  border: 1px solid var(--inner-border-color);
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.issue-item p {
+  flex-grow: 1;
+}
+
+.content ol > li {
+  line-height: 27px;
+  font-size: 11px;
+  margin: 0;
+  color: var(--sidebar-num-color);
+}
+
+.content p {
+  word-break: break-word;
+}
+
+/* Star style */
+
+.star path {
+  cursor: pointer;
+  stroke: var(--inner-border-color);
+}
+
+.completed path {
+  fill: black !important;
+  stroke: black !important;
+}
+
+.mac-shadow {
+  box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
+}
