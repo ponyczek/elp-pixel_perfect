@@ -55,7 +55,20 @@ var issues = [
       },
       {
         title: "Extra Issue for nicer Scroll",
-        star: false
+        star: true
+      }
+    ]
+  },
+  {
+    day: "12-07-2016",
+    issues: [
+      {
+        title: "Extra Initial Crash issue",
+        star: true
+      },
+      {
+        title: "Extra Interesting Issue",
+        star: true
       }
     ]
   }
