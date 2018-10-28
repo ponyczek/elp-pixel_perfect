@@ -181,7 +181,7 @@ html {
 
 /* Star style */
 
-.star path {
+.uncompleted path {
   cursor: pointer;
   stroke: var(--inner-border-color);
 }

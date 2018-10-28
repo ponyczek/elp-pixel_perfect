@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
@@ -17,98 +18,33 @@
     <div class="app-container mac-shadow">
       <aside class="sidebar">
         <div class="btn-group">
-          <button class="system-btn btn-exit"></button>
-          <button class="system-btn btn-minimise"></button>
-          <button class="system-btn btn-maximise"></button>
+          <button class="system-btn btn-exit" onclick='hideWindow()'></button>
+          <button class="system-btn btn-minimise" onclick='hideWindow()'></button>
+          <button class="system-btn btn-maximise" onclick='hideWindow()'></button>
         </div>
         <nav>
           <ul>
-            <li class="sidebar-item"><a href="#"><img src="assets/img/icon-github.svg" alt="All issues">All<span>12</span></a></li>
-            <li class="sidebar-item"><a href="#"><img src="assets/img/icon-open-issue.svg" alt="Open issues">Open<span>4</span></a></li>
-            <li class="sidebar-item"><a href="#"><img src="assets/img/icon-closed-issue.svg" alt="Closed issues">Closed<span>8</span></a></li>
+            <li class="sidebar-item" onclick="tabSelected(event, 'all')"><a href="#"><img src="assets/img/icon-github.svg"
+                  alt="Show all issues">All<span>12</span></a></li>
+            <li class="sidebar-item" onclick="tabSelected(event, 'open')"><a href="#"><img src="assets/img/icon-open-issue.svg"
+                  alt="Show open issues">Open<span>4</span></a></li>
+            <li class="sidebar-item" onclick="tabSelected(event, 'closed')"><a href="#"><img src="assets/img/icon-closed-issue.svg"
+                  alt="Show closed issues">Closed<span>8</span></a></li>
           </ul>
         </nav>
       </aside>
       <section class="content">
         <div class="inner">
-          <ol>
-            <li>19-07-2016
-              <ul>
-                <li class="issue-item">
-                  <p>Page changes</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 17 16" class="star">
-                    <defs>
-                      <style>
-                        .cls-1 {
-                          fill: #fff;
-                          fill-rule: evenodd;
-                        }
-                      </style>
-                    </defs>
-                    <path d="M8.500,0.000 L11.301,5.028 L16.999,6.112 L13.033,10.302 L13.753,16.000 L8.500,13.561 L3.247,16.000 L3.967,10.302 L0.001,6.112 L5.699,5.028 L8.500,0.000 "
-                      class="cls-1" />
-                  </svg>
-                </li>
-                <li class="issue-item">
-                  <p>Review of last issues</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 17 16" class="star">
-                    <defs>
-                      <style>
-                        .cls-1 {
-                          fill: #fff;
-                          fill-rule: evenodd;
-                        }
-                      </style>
-                    </defs>
-                    <path d="M8.500,0.000 L11.301,5.028 L16.999,6.112 L13.033,10.302 L13.753,16.000 L8.500,13.561 L3.247,16.000 L3.967,10.302 L0.001,6.112 L5.699,5.028 L8.500,0.000 "
-                      class="cls-1" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>18-07-2016
-              <ul>
-                <li class="issue-item">
-                  <p>Visual UI Update Review</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 17 16" class="star">
-                    <defs>
-                      <style>
-                        .cls-1 {
-                          fill: #fff;
-                          fill-rule: evenodd;
-                        }
-                      </style>
-                    </defs>
-                    <path d="M8.500,0.000 L11.301,5.028 L16.999,6.112 L13.033,10.302 L13.753,16.000 L8.500,13.561 L3.247,16.000 L3.967,10.302 L0.001,6.112 L5.699,5.028 L8.500,0.000 "
-                      class="cls-1" />
-                  </svg>
-                </li>
-                <li class="issue-item">
-                  <p>Sidebar changes</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 17 16" class="star">
-                    <defs>
-                      <style>
-                        .cls-1 {
-                          fill: #fff;
-                          fill-rule: evenodd;
-                        }
-                      </style>
-                    </defs>
-                    <path d="M8.500,0.000 L11.301,5.028 L16.999,6.112 L13.033,10.302 L13.753,16.000 L8.500,13.561 L3.247,16.000 L3.967,10.302 L0.001,6.112 L5.699,5.028 L8.500,0.000 "
-                      class="cls-1" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
+          <ol id="issues-list">
+            <!-- Issues will be loaded here -->
           </ol>
         </div>
       </section>
     </div>
   </div>
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/dataMockup.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
